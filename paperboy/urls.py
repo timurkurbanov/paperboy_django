@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('paperboy/<int:id>/deliver/', views.deliver, name='deliver'),
+    path('paperboy/<int:id>', views.paperboy_details, name='paperboy_details')
 ]

@@ -17,7 +17,7 @@
     <ul>
       {% for pb in paperboys %}
         <li class='paperboy'>
-          <h2 class='paperboy-heading'>{{ pb.name }}</h2>
+          <h2 class='paperboy-heading'><a href="{% url 'paperboy_details' id=pb.pk %}">{{ pb.name }}</a></h2>
           <p>{{ pb.report }}</p>
           <form class='deliver-form' action="{% url 'deliver' id=pb.id %}" method='post'>
             {% csrf_token %}
